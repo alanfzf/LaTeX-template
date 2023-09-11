@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+% **** DOCUMENT CONFIG {{{
+\usepackage[spanish]{babel} % document language
+\usepackage{times} % times new roman font
+\usepackage{graphicx} % graphics package
+
+% Margins and spacing
+\usepackage{array}
+\usepackage{geometry} % Add the geometry package to set page margins
+\geometry{margin=1in} 
+
+\usepackage{setspace} % Include the set space package
+\doublespacing % Set double spacing
+
+% Customize the style of the TOC
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+
+% Customize the style of all enumrates
+\usepackage{enumitem}
+\setlist[enumerate]{label=\alph*)}
+
+% Urls
+\usepackage[colorlinks=true, linkcolor=black]{hyperref}
+
+% Bibliography
+\usepackage{apacite}
+% }}}
+
+
+% **** PREAMBLE {{{
+\title{Titulo}
+\author{Alan David González López (4090-19-4713)}
+\date{\today} % you can use  \date{2023-03-03} to specify a date
+% }}}
+
+
+
+\begin{document}
+% DOCUMENT TITLE
+\maketitle
+\thispagestyle{empty}
+
+% TOC AND LIST OF FIGURES
+\newpage
+\pagenumbering{roman} 
+\tableofcontents
+\newpage
+\listoffigures
+
+% DOCUMENT CONTENT
+\newpage
+\pagenumbering{arabic} 
+\setcounter{page}{1}
+% !!! include your content here !!!
+
+
+% REFERENCES
+\bibliographystyle{apacite}
+\bibliography{references}
+\end{document}
