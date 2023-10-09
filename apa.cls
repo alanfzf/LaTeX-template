@@ -2,20 +2,19 @@
 \ProvidesClass{APA}[2023/08/21 APA 7th Edition format]
 \LoadClass[12pt, letterpaper]{article}
 
-% **** ESTABLECER ESPACIADO ****
-\RequirePackage{setspace} 
-\doublespacing
-\setlength{\parskip}{6pt}
-
 % **** ESTABLECER MARGENES ****
 \RequirePackage[margin=1in, headheight=14.5pt]{geometry}
 \raggedright % alineado a la izquierda
 \setlength{\parindent}{0.5in} % sangria
 
 % **** OPCIONES GENERALES ****
-\RequirePackage[spanish]{babel}
 \RequirePackage{times}
 \RequirePackage{graphicx}
+
+% **** ESTABLECER ESPACIADO ****
+\RequirePackage{setspace} 
+\doublespacing
+\setlength{\parskip}{6pt}
 
 % **** ESTILO DE LOS TÍTULOS ****
 \RequirePackage{titlesec} 
@@ -28,7 +27,7 @@
 
 % **** ESTILO DE ENUMERATES ****
 \RequirePackage{enumitem}
-\setlist[enumerate]{label=\alph*)}
+\setlist[enumerate]{itemsep=6pt, parsep=0pt, label=\alph*)}
 
 % **** NUMERACIÓN DE LA PÁGINA ****
 \RequirePackage{fancyhdr}
@@ -48,8 +47,14 @@
 \RequirePackage{apacite}
 \bibliographystyle{apacite}
 
+% **** ESPAÑOL ****
+\RequirePackage[spanish]{babel}
+\addto{\captionsspanish}{
+  \renewcommand{\refname}{REFERENCIAS}
+  % \renewcommand{\contentsname}{TABLA DE CONTENIDOS}
+}
+
 % ========== [EXTRA PLUGINS] ==========
 \RequirePackage{longtable}
-\RequirePackage{eso-pic}
 
 \endinput
