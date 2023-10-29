@@ -2,19 +2,20 @@
 \ProvidesClass{APA}[2023/08/21 APA 7th Edition format]
 \LoadClass[12pt, letterpaper]{article}
 
+% **** ESTABLECER ESPACIADO ****
+\RequirePackage{setspace} 
+\doublespacing
+\setlength{\parskip}{6pt}
+
 % **** ESTABLECER MARGENES ****
 \RequirePackage[margin=1in, headheight=14.5pt]{geometry}
 \raggedright % alineado a la izquierda
 \setlength{\parindent}{0.5in} % sangria
 
 % **** OPCIONES GENERALES ****
+\RequirePackage[spanish]{babel}
 \RequirePackage{times}
 \RequirePackage{graphicx}
-
-% **** ESTABLECER ESPACIADO ****
-\RequirePackage{setspace} 
-\doublespacing
-\setlength{\parskip}{6pt}
 
 % **** ESTILO DE LOS TÍTULOS ****
 \RequirePackage{titlesec} 
@@ -25,22 +26,29 @@
 \titleformat{\subparagraph}{\bfseries\itshape}{\thesubparagraph}{1em}{} % Estilo negrita y cursiva
 \setcounter{secnumdepth}{5}
 
+% espacio entre títulos
+% \titlespacing{\section}{0pt}{*0}{*0}
+% \titlespacing{\subsection}{0pt}{*0}{*0}
+% \titlespacing{\subsubsection}{0pt}{*0}{*0}
+% \titlespacing{\paragraph}{0pt}{*0}{*0}
+% \titlespacing{\subparagraph}{0pt}{*0}{*0}
+
 % **** ESTILO DE ENUMERATES ****
 \RequirePackage{enumitem}
-\setlist[enumerate]{itemsep=6pt, parsep=0pt, label=\alph*)}
+\setlist[enumerate]{
+  itemsep=6pt,
+  parsep=0pt,
+  topsep=0pt,
+  partopsep=0pt,
+  label=\alph*)
+}
 
 % **** NUMERACIÓN DE LA PÁGINA ****
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\thepage}
-\renewcommand{\headrulewidth}{0pt} % Eliminamos la línea horizontal de encabezado
-
-% **** TABLAS DE CONTENIDOS ****
-\RequirePackage{tocloft}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\headrulewidth}{0pt}
 
 % **** REFERENCIAS ****
 \RequirePackage[colorlinks, allcolors=black]{hyperref}
@@ -50,11 +58,15 @@
 % **** ESPAÑOL ****
 \RequirePackage[spanish]{babel}
 \addto{\captionsspanish}{
-  \renewcommand{\refname}{REFERENCIAS}
-  % \renewcommand{\contentsname}{TABLA DE CONTENIDOS}
+  \renewcommand{\contentsname}{ÍNDICE}
+  \renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}
+  \renewcommand{\listtablename}{ÍNDICE DE CUADROS}
 }
 
 % ========== [EXTRA PLUGINS] ==========
 \RequirePackage{longtable}
+\RequirePackage{array}
+\RequirePackage{eso-pic}
+\RequirePackage{rotating}
 
 \endinput
