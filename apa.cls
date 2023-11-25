@@ -4,8 +4,9 @@
 
 % **** ESTABLECER ESPACIADO ****
 \RequirePackage{setspace} 
-\doublespacing
-\setlength{\parskip}{6pt}
+% \setlength{\parskip}{6pt}
+% \doublespacing
+\linespread{2} % 
 
 % **** ESTABLECER MARGENES ****
 \RequirePackage[margin=1in, headheight=14.5pt]{geometry}
@@ -13,6 +14,8 @@
 \setlength{\parindent}{0.5in} % sangria
 
 % **** OPCIONES GENERALES ****
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
 \RequirePackage[spanish]{babel}
 \RequirePackage{times}
 \RequirePackage{graphicx}
@@ -27,11 +30,11 @@
 \setcounter{secnumdepth}{5}
 
 % espacio entre títulos
-% \titlespacing{\section}{0pt}{*0}{*0}
-% \titlespacing{\subsection}{0pt}{*0}{*0}
-% \titlespacing{\subsubsection}{0pt}{*0}{*0}
-% \titlespacing{\paragraph}{0pt}{*0}{*0}
-% \titlespacing{\subparagraph}{0pt}{*0}{*0}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titlespacing{\paragraph}{0pt}{*0}{*0}
+\titlespacing{\subparagraph}{0pt}{*0}{*0}
 
 % **** ESTILO DE ENUMERATES ****
 \RequirePackage{enumitem}
