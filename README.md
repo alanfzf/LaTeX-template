@@ -5,16 +5,15 @@ Small template for my LaTeX documents
 ## Requirements
 
 ```bash
-sudo apt install tikz
-sudo apt install latexmk
-sudo apt install texlive-lang-spanish
-sudo apt install texlive-font-utils
-sudo apt install texlive-latex-extra
-sudo apt install texlive-bibtex-extra
+# sudo apt install tikz
+sudo apt install ttf-mscorefonts-installer \
+latexmk texlive-lang-spanish texlive-font-utils \
+texlive-latex-extra texlive-bibtex-extra \
+texlive-xetex
 ```
 
 ## Clone this template
 
 ```bash
-git clone https://github.com/alanfvn/LaTeX-doc-template document-name
+git clone https://github.com/alanfzf/LaTeX-doc-template document-name
 ```

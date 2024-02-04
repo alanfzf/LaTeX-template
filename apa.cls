@@ -4,20 +4,17 @@
 
 % **** ESTABLECER ESPACIADO ****
 \RequirePackage{setspace} 
-% \setlength{\parskip}{6pt}
-% \doublespacing
 \linespread{2} % 
 
 % **** ESTABLECER MARGENES ****
 \RequirePackage[margin=1in, headheight=14.5pt]{geometry}
-\raggedright % alineado a la izquierda
+% \raggedright % alineado a la izquierda, latex automáticamente utiliza justificado
 \setlength{\parindent}{0.5in} % sangria
 
 % **** OPCIONES GENERALES ****
-\RequirePackage[T1]{fontenc}
-\RequirePackage[utf8]{inputenc}
 \RequirePackage[spanish]{babel}
-\RequirePackage{times}
+\RequirePackage{fontspec}
+\setmainfont{Arial}
 \RequirePackage{graphicx}
 
 % **** ESTILO DE LOS TÍTULOS ****
