@@ -1,2 +1,2 @@
-build/
-!imgs/.gitkeep 
+/build
+/.direnv

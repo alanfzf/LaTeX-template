@@ -3,8 +3,8 @@
 \LoadClass[12pt, letterpaper]{article}
 
 % **** ESTABLECER ESPACIADO ****
-\RequirePackage{setspace} 
-\linespread{2} % 
+\RequirePackage{setspace}
+\linespread{2} %
 
 % **** ESTABLECER MARGENES ****
 \RequirePackage[margin=1in, headheight=14.5pt]{geometry}
@@ -14,11 +14,11 @@
 % **** OPCIONES GENERALES ****
 \RequirePackage[spanish]{babel}
 \RequirePackage{fontspec}
-\setmainfont{Arial}
+% \setmainfont{Arial}
 \RequirePackage{graphicx}
 
 % **** ESTILO DE LOS TÍTULOS ****
-\RequirePackage{titlesec} 
+\RequirePackage{titlesec}
 \titleformat{\section}{\centering\bfseries}{}{0em}{}
 \titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\bfseries\itshape}{\thesubsubsection}{1em}{}
